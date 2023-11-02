@@ -12,6 +12,8 @@ using UnityEditor.Callbacks;
 using UnityEngine.Profiling;
 using UnityEngine.UI;
 
+using UnityEngine.InputSystem;
+
 
 public class BarracudaStyleTransfer : MonoBehaviour
 {
@@ -172,6 +174,10 @@ public class BarracudaStyleTransfer : MonoBehaviour
     };
 
 
+    [SerializeField] InputActionProperty trigger; 
+    [SerializeField] InputActionProperty grip;
+
+
     void Start()
     {
         // Initialize watchers
@@ -218,13 +224,13 @@ public class BarracudaStyleTransfer : MonoBehaviour
             modelToUse = setModelToUse;
 
         // Controls: Enable/Disable style transfer
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || trigger.action.triggered)
         {
             shouldApplyStyleTransfer = !shouldApplyStyleTransfer;
         }
 
         // Controls: Cycle through the given styles
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) || grip.action.triggered)
         {
             if (shouldApplyStyleTransfer)
             {
