@@ -1,8 +1,12 @@
 {
   "dependencies": {
+    "com.unity.barracuda": "https://github.com/Unity-Technologies/barracuda-release.git",
     "com.unity.burst": "1.8.8",
     "com.unity.collections": "2.1.4",
     "com.unity.ide.rider": "3.0.24",
+    "com.unity.xr.interaction.toolkit": "2.5.2",
+    "com.unity.xr.management": "4.4.0",
+    "com.unity.xr.openxr": "1.8.2",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
